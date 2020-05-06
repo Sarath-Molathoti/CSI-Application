@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "321838279211",
+    "firebase_url": "https://csi-application-3da57.firebaseio.com",
+    "project_id": "csi-application-3da57",
+    "storage_bucket": "csi-application-3da57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321838279211:android:833d5c033878f04bde986e",
+        "android_client_info": {
+          "package_name": "com.example.csi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321838279211-pojrg66mbmsn58fpkh4q8iv6ro5fv50u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.csi",
+            "certificate_hash": "ede169189855374a576231ec52c150aace4b534c"
+          }
+        },
+        {
+          "client_id": "321838279211-q95r5o9acgkt1un5i14e0frc8ejocfgf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrWM7Mcu7CR-lVdnWbI7nsA813PhnHfBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321838279211-q95r5o9acgkt1un5i14e0frc8ejocfgf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

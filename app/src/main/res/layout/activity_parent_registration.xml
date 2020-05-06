@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ParentRegistrationActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parent Registration"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"/>
+
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Name of the Student"
+        android:id="@+id/student_name"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Name of the Parent"
+        android:id="@+id/parent_name"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Student Roll Number"
+        android:id="@+id/roll_no"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Mobile Number"
+        android:id="@+id/mobile"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Email"
+        android:id="@+id/parent_email"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Address"
+        android:id="@+id/address"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Fa Email"
+        android:id="@+id/fa_email"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Warden Email"
+        android:id="@+id/warden_email"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Password"
+        android:id="@+id/password"
+        android:layout_marginLeft="10dp"/>
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:id="@+id/register_btn"
+        android:text="Save and Register"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#F4F0F0"
+        android:background="#112"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+
+</LinearLayout>
