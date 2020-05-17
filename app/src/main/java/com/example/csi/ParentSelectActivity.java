@@ -43,7 +43,7 @@ public class ParentSelectActivity extends AppCompatActivity {
                 messageFromFa_intent.putExtra("student_name",sStudentName);
                 messageFromFa_intent.putExtra("email",sEmail);
                 messageFromFa_intent.putExtra("fa_email",sFaEmail);
-                messageFromFa_intent.putExtra("Warden_email",sWardenEmail);
+                messageFromFa_intent.putExtra("warden_email",sWardenEmail);
                 messageFromFa_intent.putExtra("roll_no",sRollNo);
                 startActivity(messageFromFa_intent);
             }
@@ -52,6 +52,12 @@ public class ParentSelectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent messageFromWarden_intent = new Intent(ParentSelectActivity.this,MessageFromWardenActivity.class);
+                messageFromWarden_intent.putExtra("parent_name",sParentName);
+                messageFromWarden_intent.putExtra("student_name",sStudentName);
+                messageFromWarden_intent.putExtra("email",sEmail);
+                messageFromWarden_intent.putExtra("fa_email",sFaEmail);
+                messageFromWarden_intent.putExtra("warden_email",sWardenEmail);
+                messageFromWarden_intent.putExtra("roll_no",sRollNo);
                 startActivity(messageFromWarden_intent);
             }
         });
@@ -63,7 +69,7 @@ public class ParentSelectActivity extends AppCompatActivity {
                 messageToFa_intent.putExtra("student_name",sStudentName);
                 messageToFa_intent.putExtra("email",sEmail);
                 messageToFa_intent.putExtra("fa_email",sFaEmail);
-                messageToFa_intent.putExtra("Warden_email",sWardenEmail);
+                messageToFa_intent.putExtra("warden_email",sWardenEmail);
                 messageToFa_intent.putExtra("roll_no",sRollNo);
                 startActivity(messageToFa_intent);
             }

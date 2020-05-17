@@ -46,8 +46,9 @@ public class ShowMsgsFromFaActivity extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Information info = snapshot.getValue(Information.class);
                     String check = info.getFrom();
+                    String check2 = info.getTo();
                     String txt = "From : " + info.getFrom() + "\n" + "To : " + info.getTo() + "\n" + "Message : " + info.getMessage();
-                    if(check.equals(from)){
+                    if(check.equals(from) && check2.equals(qto)){
                         list.add(txt);
                    }
 

@@ -57,7 +57,7 @@ public class MessageToWardenActivity extends AppCompatActivity {
                 showFromW_intent.putExtra("student_name",aStudentName);
                 showFromW_intent.putExtra("email",aFrom);
                 showFromW_intent.putExtra("fa_email",aFaEmail);
-                showFromW_intent.putExtra("Warden_email",aTo);
+                showFromW_intent.putExtra("warden_email",aTo);
                 showFromW_intent.putExtra("roll_no",aRollNo);
                 startActivity(showFromW_intent);
 

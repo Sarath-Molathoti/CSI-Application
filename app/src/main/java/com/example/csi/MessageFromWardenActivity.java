@@ -27,6 +27,13 @@ public class MessageFromWardenActivity extends AppCompatActivity {
 
         listview2 = (ListView) findViewById(R.id.listView2);
 
+        Intent intent = getIntent();
+        final String bParentName = intent.getStringExtra("parent_name");
+        final String bStudentName = intent.getStringExtra("student_name");
+        final String bFrom = intent.getStringExtra("email");
+        final String bto = intent.getStringExtra("fa_email");
+        final String bWardenEmail = intent.getStringExtra("warden_email");
+        final String bRollNo = intent.getStringExtra("roll_no");
 
 
         final ArrayList<String> list2 = new ArrayList<>();
@@ -40,11 +47,12 @@ public class MessageFromWardenActivity extends AppCompatActivity {
                 list2.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Information info2 = snapshot.getValue(Information.class);
-                    String check = info2.getFrom();
+                    String check1 = info2.getFrom();
+                    String check2 = info2.getTo();
                     String txt = "From : " + info2.getFrom() + "\n" + "To : " + info2.getTo() + "\n" + "Message : " + info2.getMessage();
-                   // if(check.equals(bFrom)){
+                    if(check1.equals(bFrom) && check2.equals(bWardenEmail)){
                         list2.add(txt);
-                   // }
+                   }
 
                 }
                 adapter2.notifyDataSetChanged();
