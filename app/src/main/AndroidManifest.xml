@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MessageFromFaActivity"></activity>
+        <activity android:name=".ShowMsgsFromFaActivity"></activity>
+        <activity android:name=".MessageFromFaActivity" />
         <activity android:name=".MessageToFaActivity" />
         <activity android:name=".MessageFromWardenActivity" />
         <activity android:name=".MessageToWardenActivity" />

@@ -38,7 +38,13 @@ public class ParentSelectActivity extends AppCompatActivity {
         mMessagesFromFaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent messageFromFa_intent = new Intent(ParentSelectActivity.this,MessageFromFaActivity.class);
+                Intent messageFromFa_intent = new Intent(ParentSelectActivity.this,ShowMsgsFromFaActivity.class);
+                messageFromFa_intent.putExtra("parent_name",sParentName);
+                messageFromFa_intent.putExtra("student_name",sStudentName);
+                messageFromFa_intent.putExtra("email",sEmail);
+                messageFromFa_intent.putExtra("fa_email",sFaEmail);
+                messageFromFa_intent.putExtra("Warden_email",sWardenEmail);
+                messageFromFa_intent.putExtra("roll_no",sRollNo);
                 startActivity(messageFromFa_intent);
             }
         });
@@ -70,7 +76,7 @@ public class ParentSelectActivity extends AppCompatActivity {
                 messageToWarden_intent.putExtra("student_name",sStudentName);
                 messageToWarden_intent.putExtra("email",sEmail);
                 messageToWarden_intent.putExtra("fa_email",sFaEmail);
-                messageToWarden_intent.putExtra("Warden_email",sWardenEmail);
+                messageToWarden_intent.putExtra("warden_email",sWardenEmail);
                 messageToWarden_intent.putExtra("roll_no",sRollNo);
                 startActivity(messageToWarden_intent);
             }

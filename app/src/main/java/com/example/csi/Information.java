@@ -1,24 +1,16 @@
 package com.example.csi;
 
-public class UserHelperClass2 {
-    String id,from,to,message;
+public class Information {
+    private String from,to,message;
 
-    public UserHelperClass2() {
+    public Information() {
+
     }
 
-    public UserHelperClass2(String id, String from, String to, String message) {
-        this.id = id;
+    public Information(String from, String to, String message) {
         this.from = from;
         this.to = to;
         this.message = message;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getFrom() {

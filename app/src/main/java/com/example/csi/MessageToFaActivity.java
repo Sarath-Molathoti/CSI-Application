@@ -35,17 +35,27 @@ public class MessageToFaActivity extends AppCompatActivity {
                 reference = rootNode.getReference("Messages");
 
                 Intent intent = getIntent();
-                final String pParentName = intent.getStringExtra("parent_name");
-                final String pStudentName = intent.getStringExtra("student_name");
-                final String from = intent.getStringExtra("email");
-                final String to = intent.getStringExtra("fa_email");
-                final String pWardenEmail = intent.getStringExtra("warden_email");
-                final String pRollNo = intent.getStringExtra("roll_no");
+                String pParentName = intent.getStringExtra("parent_name");
+                String pStudentName = intent.getStringExtra("student_name");
+                String pFrom = intent.getStringExtra("email");
+                String pTo = intent.getStringExtra("fa_email");
+                String pWardenEmail = intent.getStringExtra("warden_email");
+                String pRollNo = intent.getStringExtra("roll_no");
 
                 String message = mMessageToFa.getText().toString();
+                String id = reference.push().getKey();
 
-                UserHelperClass2 helperClass2 = new UserHelperClass2(from,to,message);
-                reference.setValue(helperClass2);
+                UserHelperClass2 helperClass2 = new UserHelperClass2(id,pFrom,pTo,message);
+                reference.child(id).setValue(helperClass2);
+
+                Intent showFromFa_intent = new Intent(MessageToFaActivity.this,ShowMsgsFromFaActivity.class);
+                showFromFa_intent.putExtra("parent_name",pParentName);
+                showFromFa_intent.putExtra("student_name",pStudentName);
+                showFromFa_intent.putExtra("email",pFrom);
+                showFromFa_intent.putExtra("fa_email",pTo);
+                showFromFa_intent.putExtra("Warden_email",pWardenEmail);
+                showFromFa_intent.putExtra("roll_no",pRollNo);
+                startActivity(showFromFa_intent);
 
 
 

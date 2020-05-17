@@ -1,23 +1,16 @@
 package com.example.csi;
 
-public class UserHelperClass2 {
-    String id,from,to,message;
+public class UserHelperClass3 {
+    private String from,to,message,id;
 
-    public UserHelperClass2() {
+    public UserHelperClass3() {
+
     }
 
-    public UserHelperClass2(String id, String from, String to, String message) {
-        this.id = id;
+    public UserHelperClass3(String from, String to, String message, String id) {
         this.from = from;
         this.to = to;
         this.message = message;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
         this.id = id;
     }
 
@@ -43,5 +36,13 @@ public class UserHelperClass2 {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
