@@ -80,16 +80,19 @@
         android:hint="Password"
         android:id="@+id/password"
         android:layout_marginLeft="10dp"/>
+
     <Button
         android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:id="@+id/register_btn"
-        android:text="Save and Register"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#F4F0F0"
-        android:background="#112"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Save and Register"
+        android:textSize="25dp"
         android:textStyle="bold"
-        android:textSize="25dp"/>
+        android:background="@drawable/custom_button2"
+        android:id="@+id/register_btn"
+        />
 
 </LinearLayout>

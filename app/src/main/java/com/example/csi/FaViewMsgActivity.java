@@ -16,44 +16,44 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ShowMsgsFromFaActivity extends AppCompatActivity {
-    private ListView listview;
+public class FaViewMsgActivity extends AppCompatActivity {
+
+    private ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_msgs_from_fa);
+        setContentView(R.layout.activity_fa_view_msg);
 
-        listview = (ListView) findViewById(R.id.listView);
+        mListView = (ListView) findViewById(R.id.listView3);
 
         Intent intent = getIntent();
-        final String qParentName = intent.getStringExtra("parent_name");
-        final String qStudentName = intent.getStringExtra("student_name");
-        final String from = intent.getStringExtra("email");
-        final String qto = intent.getStringExtra("fa_email");
-        final String qWardenEmail = intent.getStringExtra("warden_email");
-        final String qRollNo = intent.getStringExtra("roll_no");
+       // final String rParentEmail = intent.getStringExtra("parent_email");
+        final String rFaEmail = intent.getStringExtra("fac_email");
+        final String rFaName = intent.getStringExtra("fac_name");
+        final String rFaUserId = intent.getStringExtra("fac_user_id");
+       // final String rRollNo = intent.getStringExtra("roll_no");
 
-        final ArrayList<String> list = new ArrayList<>();
-        final ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.list_item,list);
-        listview.setAdapter(adapter);
+        final ArrayList<String> list3 = new ArrayList<>();
+        final ArrayAdapter adapter3 = new ArrayAdapter<String>(this,R.layout.list_item,list3);
+        mListView.setAdapter(adapter3);
 
-        DatabaseReference reference2 = FirebaseDatabase.getInstance().getReference().child("Messages");
-        reference2.addValueEventListener(new ValueEventListener() {
+        DatabaseReference reference3 = FirebaseDatabase.getInstance().getReference().child("Messages");
+        reference3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                list.clear();
+                list3.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Information info = snapshot.getValue(Information.class);
                     String check = info.getFrom();
                     String check2 = info.getTo();
                     String txt = "From : " + info.getFrom() + "\n" + "To : " + info.getTo() + "\n" + "Message : " + info.getMessage();
-                    if((check.equals(from) && check2.equals(qto)) || (check.equals(qto) && check2.equals(from))){
-                        list.add(txt);
-                   }
+                    if(check.equals(rFaEmail) || check2.equals(rFaEmail)){
+                        list3.add(txt);
+                    }
 
                 }
-                adapter.notifyDataSetChanged();
+                adapter3.notifyDataSetChanged();
             }
 
             @Override

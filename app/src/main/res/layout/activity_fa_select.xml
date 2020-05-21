@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ParentSelectActivity">
+    tools:context=".FaSelectActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,35 +16,6 @@
         android:textStyle="bold"
         android:textColor="#009688"
         android:textSize="35dp"/>
-    <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="5dp"
-        android:paddingBottom="15dp"
-        android:paddingTop="15dp"
-        android:text="Message Warden"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:background="@drawable/custom_button1"
-        android:textColor="#111"
-        android:id="@+id/message_to_warden_btn"
-        />
-
-    <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:text="Messages From Warden"
-        android:paddingBottom="15dp"
-        android:paddingTop="15dp"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:background="@drawable/custom_button1"
-        android:textColor="#111"
-        android:id="@+id/messages_from_warden_btn"
-        />
 
     <Button
         android:layout_width="400dp"
@@ -53,12 +24,12 @@
         android:layout_marginLeft="5dp"
         android:paddingBottom="15dp"
         android:paddingTop="15dp"
-        android:text="Message FA"
+        android:text="Message Parent"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:background="@drawable/custom_button1"
+        android:background="#11E1CE"
         android:textColor="#111"
-        android:id="@+id/message_to_fa_btn"
+        android:id="@+id/fa_send_msg_btn"
         />
 
     <Button
@@ -66,14 +37,14 @@
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="5dp"
-        android:text="Messages From FA"
+        android:text="View Messages"
         android:paddingBottom="15dp"
         android:paddingTop="15dp"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:background="@drawable/custom_button1"
+        android:background="#11E1CE"
         android:textColor="#111"
-        android:id="@+id/messages_from_fa_btn"
+        android:id="@+id/fa_view_msg_btn"
         />
 
 

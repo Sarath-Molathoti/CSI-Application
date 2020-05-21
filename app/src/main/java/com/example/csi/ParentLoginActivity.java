@@ -3,6 +3,7 @@ package com.example.csi;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,8 @@ public class ParentLoginActivity extends AppCompatActivity {
     private EditText mEnteredPassword;
     private Button mLoginBtn;
 
+    private ProgressDialog mRegProgress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +33,16 @@ public class ParentLoginActivity extends AppCompatActivity {
         mEnteredRollNo = (EditText) findViewById(R.id.plogin_roll_no);
         mEnteredPassword = (EditText) findViewById(R.id.plogin_password);
         mLoginBtn = (Button) findViewById(R.id.login_btn);
+
+        mRegProgress = new ProgressDialog(this);
+
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mRegProgress.setTitle("Checking for User");
+                mRegProgress.setMessage("Please wait a second");
+                mRegProgress.setCanceledOnTouchOutside(false);
+                mRegProgress.show();
                 isUser();
             }
         });
@@ -54,6 +64,7 @@ public class ParentLoginActivity extends AppCompatActivity {
                     String passwordFromDb = dataSnapshot.child(UserEnteredRollNo).child("password").getValue(String.class);
 
                     if(passwordFromDb.equals(UserEnteredPassword)){
+                        mRegProgress.dismiss();
                         String parentNameFromDb = dataSnapshot.child(UserEnteredRollNo).child("parent_name").getValue(String.class);
                         String studentNameFromDb = dataSnapshot.child(UserEnteredRollNo).child("student_name").getValue(String.class);
                         String emailFromDb = dataSnapshot.child(UserEnteredRollNo).child("email").getValue(String.class);
@@ -72,9 +83,11 @@ public class ParentLoginActivity extends AppCompatActivity {
                         finish();
                    }
                     else{
+                        mRegProgress.hide();
                         Toast.makeText(ParentLoginActivity.this, "Invalid Password", Toast.LENGTH_SHORT).show();
                     }
                 }else {
+                    mRegProgress.hide();
                     Toast.makeText(ParentLoginActivity.this, "No Such User Exist", Toast.LENGTH_SHORT).show();
                 }
             }

@@ -3,32 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".ParentLoginActivity">
+    android:orientation="vertical"
+    tools:context=".WrSendMsgActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="150dp"
+        android:text="Send Message"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"
         android:textStyle="bold"
         android:textSize="35dp"/>
     <EditText
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:hint="Roll Number"
+        android:hint="Student Roll No"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="60dp"
-        android:id="@+id/plogin_roll_no"/>
+        android:id="@+id/w_stu_roll_no"/>
     <EditText
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:hint="Password"
+        android:hint="Type your message here"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/plogin_password"/>
+        android:id="@+id/w_msg"/>
+
+
     <Button
         android:layout_width="400dp"
         android:layout_height="65dp"
@@ -36,11 +38,11 @@
         android:layout_marginLeft="10dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:text="Login"
+        android:text="Send"
         android:textSize="25dp"
         android:textStyle="bold"
         android:background="@drawable/custom_button2"
-        android:id="@+id/login_btn"
+        android:id="@+id/w_msg_btn"
         />
 
 </LinearLayout>

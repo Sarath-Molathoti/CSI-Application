@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,6 +20,8 @@ import java.util.ArrayList;
 public class MessageFromWardenActivity extends AppCompatActivity {
 
     private ListView listview2;
+
+    //private TextView fromText,toText,messageText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +53,7 @@ public class MessageFromWardenActivity extends AppCompatActivity {
                     String check1 = info2.getFrom();
                     String check2 = info2.getTo();
                     String txt = "From : " + info2.getFrom() + "\n" + "To : " + info2.getTo() + "\n" + "Message : " + info2.getMessage();
-                    if(check1.equals(bFrom) && check2.equals(bWardenEmail)){
+                    if((check1.equals(bFrom) && check2.equals(bWardenEmail)) || (check1.equals(bWardenEmail) && check2.equals(bFrom))){
                         list2.add(txt);
                    }
 

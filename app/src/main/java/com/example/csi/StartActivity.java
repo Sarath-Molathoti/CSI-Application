@@ -26,6 +26,7 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent parent_registration_intent = new Intent(StartActivity.this,ParentRegistrationActivity.class);
                 startActivity(parent_registration_intent);
+                finish();
             }
         });
         mSignInBtn.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +34,7 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent parent_login_intent = new Intent(StartActivity.this,ParentLoginActivity.class);
                 startActivity(parent_login_intent);
+                finish();
             }
         });
     }

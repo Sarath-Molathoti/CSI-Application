@@ -3,11 +3,13 @@ package com.example.csi;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,6 +26,9 @@ public class MessageToWardenActivity extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference3;
 
+    private ProgressDialog mRegProgress;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +37,16 @@ public class MessageToWardenActivity extends AppCompatActivity {
         mMessageToWarden = (EditText) findViewById(R.id.p_to_w_msg);
         mMessageToWardenBtn = (Button) findViewById(R.id.p_to_w_msg_btn);
 
+        mRegProgress = new ProgressDialog(this);
+
+
         mMessageToWardenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mRegProgress.setTitle("Sending Message");
+                mRegProgress.setMessage("Please wait a second");
+                mRegProgress.setCanceledOnTouchOutside(false);
+                mRegProgress.show();
                 rootNode = FirebaseDatabase.getInstance();
                 reference3 = rootNode.getReference("Messages");
 
@@ -51,6 +63,9 @@ public class MessageToWardenActivity extends AppCompatActivity {
 
                 UserHelperClass3 helperClass3 = new UserHelperClass3(aFrom,aTo,message,id);
                 reference3.child(id).setValue(helperClass3);
+                mRegProgress.dismiss();
+
+                Toast.makeText(MessageToWardenActivity.this, "Message Sent Successfully", Toast.LENGTH_SHORT).show();
 
                 Intent showFromW_intent = new Intent(MessageToWardenActivity.this,MessageFromWardenActivity.class);
                 showFromW_intent.putExtra("parent_name",aParentName);

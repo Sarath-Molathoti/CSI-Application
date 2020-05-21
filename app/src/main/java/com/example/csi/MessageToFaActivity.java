@@ -2,11 +2,13 @@ package com.example.csi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -19,6 +21,9 @@ public class MessageToFaActivity extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
+    private ProgressDialog mRegProgress;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +32,17 @@ public class MessageToFaActivity extends AppCompatActivity {
         mMessageToFa = (EditText) findViewById(R.id.p_to_fa_msg);
         mMessageToFaBtn = (Button) findViewById(R.id.p_to_fa_msg_btn);
 
+        mRegProgress = new ProgressDialog(this);
+
+
 
         mMessageToFaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mRegProgress.setTitle("Sending Message");
+                mRegProgress.setMessage("Please wait a second");
+                mRegProgress.setCanceledOnTouchOutside(false);
+                mRegProgress.show();
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Messages");
 
@@ -47,6 +59,10 @@ public class MessageToFaActivity extends AppCompatActivity {
 
                 UserHelperClass2 helperClass2 = new UserHelperClass2(id,pFrom,pTo,message);
                 reference.child(id).setValue(helperClass2);
+
+                mRegProgress.dismiss();
+
+                Toast.makeText(MessageToFaActivity.this, "Message Sent Successfully", Toast.LENGTH_SHORT).show();
 
                 Intent showFromFa_intent = new Intent(MessageToFaActivity.this,ShowMsgsFromFaActivity.class);
                 showFromFa_intent.putExtra("parent_name",pParentName);

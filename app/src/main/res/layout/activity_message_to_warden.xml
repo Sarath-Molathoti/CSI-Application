@@ -23,18 +23,20 @@
         android:layout_marginLeft="5dp"
         android:hint="Type Your Message Here"
         android:id="@+id/p_to_w_msg"/>
+
+
     <Button
         android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
-        android:text="Send"
-        android:background="#111"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:textColor="#EFE3E3"
-        android:id="@+id/p_to_w_msg_btn"/>
+        android:text="Send"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="@drawable/custom_button2"
+        android:id="@+id/p_to_w_msg_btn"
+        />
 
 </LinearLayout>
