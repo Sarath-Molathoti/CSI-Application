@@ -13,79 +13,99 @@
         android:text="Parent Registration"
         android:textSize="35dp"
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"/>
+        android:textColor="#0000FF"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
 
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="Name of the Student"
+        android:inputType="text"
+        android:maxLines="1"
         android:id="@+id/student_name"
-        android:layout_marginLeft="10dp"/>
+        android:layout_gravity="center"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Name of the Parent"
+        android:inputType="text"
+        android:maxLines="1"
         android:id="@+id/parent_name"
-        android:layout_marginLeft="10dp"/>
+        android:layout_gravity="center"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Student Roll Number"
+        android:textAllCaps="true"
+        android:inputType="textCapCharacters"
+        android:maxLines="1"
         android:id="@+id/roll_no"
-        android:layout_marginLeft="10dp"/>
+        android:layout_gravity="center"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Mobile Number"
+        android:inputType="text"
+        android:maxLines="1"
         android:id="@+id/mobile"
-        android:layout_marginLeft="10dp"/>
+        android:layout_gravity="center"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Email"
+        android:inputType="text"
+        android:maxLines="1"
         android:id="@+id/parent_email"
-        android:layout_marginLeft="10dp"/>
+        android:layout_gravity="center"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
         android:layout_marginTop="5dp"
         android:hint="Address"
         android:id="@+id/address"
-        android:layout_marginLeft="10dp"/>
+        android:layout_gravity="center"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Fa Email"
+        android:inputType="text"
+        android:maxLines="1"
         android:id="@+id/fa_email"
-        android:layout_marginLeft="10dp"/>
+        android:layout_gravity="center"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Warden Email"
+        android:inputType="text"
+        android:maxLines="1"
         android:id="@+id/warden_email"
-        android:layout_marginLeft="10dp"/>
+        android:layout_gravity="center"/>
 
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Password"
         android:id="@+id/password"
-        android:layout_marginLeft="10dp"/>
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:layout_gravity="center"/>
 
     <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="350dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="27dp"
+        android:layout_gravity="center"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:text="Save and Register"

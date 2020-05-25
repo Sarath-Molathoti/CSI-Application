@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="#80ff00"
     tools:context=".FaLoginActivity">
 
     <TextView
@@ -12,30 +13,37 @@
         android:layout_height="wrap_content"
         android:text="FA Login"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="150dp"
+        android:layout_gravity="center"
+        android:textColor="#0000FF"
         android:textStyle="bold"
         android:textSize="35dp"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
-        android:hint="Userid"
-        android:layout_marginLeft="10dp"
+        android:hint="UserId"
+        android:drawableLeft="@drawable/user_logo"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_gravity="center"
         android:layout_marginTop="60dp"
         android:id="@+id/fa_user_id"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Password"
-        android:layout_marginLeft="10dp"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/password_logo"
+        android:maxLines="1"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:id="@+id/fa_password"/>
 
 
     <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
+        android:layout_width="350dp"
+        android:layout_height="67dp"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:text="Login"

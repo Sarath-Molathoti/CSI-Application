@@ -5,76 +5,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFC300"
     tools:context=".ParentSelectActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to CSI"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="80dp"
+        android:text="Dashboard"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
         android:textStyle="bold"
-        android:textColor="#009688"
+        android:textColor="#FF0000"
         android:textSize="35dp"/>
-    <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="5dp"
-        android:paddingBottom="15dp"
-        android:paddingTop="15dp"
-        android:text="Message Warden"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:background="@drawable/custom_button1"
-        android:textColor="#111"
-        android:id="@+id/message_to_warden_btn"
-        />
 
-    <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:text="Messages From Warden"
-        android:paddingBottom="15dp"
-        android:paddingTop="15dp"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:background="@drawable/custom_button1"
-        android:textColor="#111"
-        android:id="@+id/messages_from_warden_btn"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:paddingBottom="15dp"
-        android:paddingTop="15dp"
-        android:text="Message FA"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:background="@drawable/custom_button1"
-        android:textColor="#111"
-        android:id="@+id/message_to_fa_btn"
-        />
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="Message Warden"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:background="@drawable/custom_button3"
+                android:textColor="#FFFFFF"
+                android:id="@+id/message_to_warden_btn"
+                />
 
-    <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:text="Messages From FA"
-        android:paddingBottom="15dp"
-        android:paddingTop="15dp"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:background="@drawable/custom_button1"
-        android:textColor="#111"
-        android:id="@+id/messages_from_fa_btn"
-        />
+            <Button
+                android:id="@+id/messages_from_warden_btn"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/custom_button3"
+                android:paddingTop="26dp"
+                android:paddingBottom="0dp"
+                android:text="Messages From Warden"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_gravity="center"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="Message FA"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:background="@drawable/custom_button3"
+                android:textColor="#FFFFFF"
+                android:id="@+id/message_to_fa_btn"
+                />
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_gravity="center"
+                android:text="Messages From FA"
+                android:layout_marginLeft="10dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:background="@drawable/custom_button3"
+                android:textColor="#FFFFFF"
+                android:id="@+id/messages_from_fa_btn"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
 
 
 </LinearLayout>

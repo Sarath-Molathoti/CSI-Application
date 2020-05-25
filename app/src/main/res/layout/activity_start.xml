@@ -5,29 +5,40 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="#FFC300"
     tools:context=".StartActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textColor="#0000FF"
+        android:textSize="35dp"/>
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="150dp"
         android:id="@+id/signup_btn"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
         android:textStyle="bold"
         android:textSize="32dp"
         android:text="SignUp"
-        android:textColor="#E5E5ED"
-        android:background="#112"/>
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_button1"/>
     <Button
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="150dp"
         android:id="@+id/signin_btn"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:textStyle="bold"
         android:textSize="32dp"
         android:text="SignIn"
-        android:textColor="#E5E5ED"
-        android:background="#112"/>
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_button1"/>
 
 </LinearLayout>

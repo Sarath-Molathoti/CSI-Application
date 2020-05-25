@@ -12,24 +12,27 @@
         android:layout_height="wrap_content"
         android:text="Message Warden"
         android:layout_gravity="center"
-        android:textColor="#111"
+        android:textColor="#0000FF"
         android:textStyle="bold"
         android:layout_marginTop="30dp"
         android:textSize="35dp"/>
     <EditText
-        android:layout_width="400dp"
-        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:drawableLeft="@drawable/message_logo"
+        android:maxLines="17"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="5dp"
+        android:layout_gravity="center"
         android:hint="Type Your Message Here"
         android:id="@+id/p_to_w_msg"/>
 
 
     <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
+        android:layout_width="350dp"
+        android:layout_height="67dp"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:text="Send"

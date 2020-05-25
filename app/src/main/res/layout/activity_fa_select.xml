@@ -5,45 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFC300"
     tools:context=".FaSelectActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to CSI"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
         android:textStyle="bold"
-        android:textColor="#009688"
+        android:textColor="#0000FF"
         android:textSize="35dp"/>
 
     <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
         android:paddingBottom="15dp"
         android:paddingTop="15dp"
         android:text="Message Parent"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:background="#11E1CE"
-        android:textColor="#111"
+        android:background="@drawable/custom_button1"
+        android:textColor="#FFFFFF"
         android:id="@+id/fa_send_msg_btn"
         />
 
     <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
         android:text="View Messages"
         android:paddingBottom="15dp"
         android:paddingTop="15dp"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:background="#11E1CE"
-        android:textColor="#111"
+        android:background="@drawable/custom_button1"
+        android:textColor="#FFFFFF"
         android:id="@+id/fa_view_msg_btn"
         />
 

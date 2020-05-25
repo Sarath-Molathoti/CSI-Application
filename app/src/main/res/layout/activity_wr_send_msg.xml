@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#48C9B0"
     tools:context=".WrSendMsgActivity">
 
     <TextView
@@ -12,30 +13,37 @@
         android:layout_height="wrap_content"
         android:text="Send Message"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="100dp"
+        android:layout_gravity="center"
         android:textStyle="bold"
+        android:textColor="#0000FF"
         android:textSize="35dp"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Student Roll No"
-        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/user_logo"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_gravity="center"
         android:layout_marginTop="60dp"
         android:id="@+id/w_stu_roll_no"/>
     <EditText
-        android:layout_width="400dp"
-        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:hint="Type your message here"
-        android:layout_marginLeft="10dp"
+        android:inputType="text"
+        android:maxLines="17"
+        android:drawableLeft="@drawable/message_logo"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:id="@+id/w_msg"/>
 
 
     <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
+        android:layout_width="350dp"
+        android:layout_height="67dp"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:text="Send"

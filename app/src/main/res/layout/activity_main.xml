@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00ff80"
     tools:context=".MainActivity">
 
     <TextView
@@ -21,16 +22,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please Select Your Role"
-        android:textSize="35dp"
+        android:textSize="28dp"
         android:textStyle="bold"
-        android:textColor="#00FF00"
+        android:textColor="#0000FF"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         />
 
     <Button
         android:id="@+id/parent_btn"
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="65dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
@@ -44,7 +45,7 @@
         android:fontFamily="sans-serif"/>
     <Button
         android:id="@+id/fa_btn"
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="65dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
@@ -58,7 +59,7 @@
         android:fontFamily="sans-serif"/>
     <Button
         android:id="@+id/warden_btn"
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="65dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"

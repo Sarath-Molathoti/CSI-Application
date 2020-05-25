@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:text="dummy"
-    android:textColor="#F6F2F2"
+    android:textColor="#FFFFFF"
     android:padding="5dp"
     android:background="@drawable/my_border"
     android:textStyle="bold"

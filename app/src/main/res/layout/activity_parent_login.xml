@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="#80ff00"
     tools:context=".ParentLoginActivity">
 
     <TextView
@@ -12,28 +13,35 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="150dp"
+        android:layout_gravity="center"
+        android:textColor="#0000FF"
         android:textStyle="bold"
         android:textSize="35dp"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Roll Number"
-        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/user_logo"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_gravity="center"
         android:layout_marginTop="60dp"
         android:id="@+id/plogin_roll_no"/>
     <EditText
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Password"
-        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/password_logo"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:id="@+id/plogin_password"/>
     <Button
-        android:layout_width="400dp"
-        android:layout_height="65dp"
+        android:layout_width="350dp"
+        android:layout_height="67dp"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:text="Login"
