@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#80ff00"
     tools:context=".FaLoginActivity">
 
     <TextView
@@ -21,7 +20,7 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="UserId"
-        android:drawableLeft="@drawable/user_logo"
+        android:drawableLeft="@drawable/user_logo2"
         android:inputType="text"
         android:maxLines="1"
         android:layout_gravity="center"
@@ -32,7 +31,7 @@
         android:layout_height="50dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:drawableLeft="@drawable/password_logo"
+        android:drawableLeft="@drawable/password_logo2"
         android:maxLines="1"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"

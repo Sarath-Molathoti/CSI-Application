@@ -39,7 +39,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:hint="Student Roll Number"
+        android:hint="Student Roll Number(IN CAPITALS)"
         android:textAllCaps="true"
         android:inputType="textCapCharacters"
         android:maxLines="1"
@@ -103,8 +103,8 @@
 
     <Button
         android:layout_width="350dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="27dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"

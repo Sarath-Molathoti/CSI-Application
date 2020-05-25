@@ -69,7 +69,7 @@ public class ParentRegistrationActivity extends AppCompatActivity {
                 String fa_email = mFaEmail.getText().toString();
                 String warden_email = mWardenEmail.getText().toString();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-                String rollNoPattern = "[Bb][0-9][0-9][0-9][0-9][0-9][0-9][a-zA-Z][a-zA-Z]$";
+                String rollNoPattern = "[BM][0-9][0-9][0-9][0-9][0-9][0-9][A-Z][A-Z]$";
 
 
                 if(email.isEmpty() || password.isEmpty() || student_name.isEmpty() || parent_name.isEmpty() || mobile.isEmpty() || address.isEmpty() || roll_no.isEmpty() || fa_email.isEmpty() || warden_email.isEmpty()){
@@ -81,7 +81,7 @@ public class ParentRegistrationActivity extends AppCompatActivity {
                 }else if(!email.matches(emailPattern)){
                     Toast.makeText(ParentRegistrationActivity.this, "Invalid Email Address", Toast.LENGTH_SHORT).show();
                 }else if(!roll_no.matches(rollNoPattern)){
-                    Toast.makeText(ParentRegistrationActivity.this, "Please Enter a valid NITC Roll No", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ParentRegistrationActivity.this, "Please Enter a valid NITC Roll No in CAPITAL LETTERS", Toast.LENGTH_SHORT).show();
                 }
                 else {
 
