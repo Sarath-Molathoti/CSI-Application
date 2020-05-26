@@ -16,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class MessageFromWardenActivity extends AppCompatActivity {
 
@@ -58,6 +60,11 @@ public class MessageFromWardenActivity extends AppCompatActivity {
                    }
 
                 }
+                if (list2.isEmpty()) {
+
+                    list2.add("                  No Messages   ");
+                }
+                Collections.reverse(list2);
                 adapter2.notifyDataSetChanged();
             }
 

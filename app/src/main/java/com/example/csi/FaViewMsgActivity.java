@@ -15,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class FaViewMsgActivity extends AppCompatActivity {
 
@@ -53,6 +54,11 @@ public class FaViewMsgActivity extends AppCompatActivity {
                     }
 
                 }
+                if (list3.isEmpty()) {
+
+                    list3.add("                   No Messages   ");
+                }
+                Collections.reverse(list3);
                 adapter3.notifyDataSetChanged();
             }
 
