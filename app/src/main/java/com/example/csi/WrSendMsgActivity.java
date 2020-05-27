@@ -78,7 +78,7 @@ public class WrSendMsgActivity extends AppCompatActivity {
 
                             if(wardenEmail.equals(wardenEmailFromDb)){
                                 String id = reference.push().getKey();
-                                UserHelperClass2 helperClass6 = new UserHelperClass2(id,wardenEmail,parentEmailFromDb,wardenMessage);
+                                UserHelperClass2 helperClass6 = new UserHelperClass2(id,wardenEmail,parentEmailFromDb,WardenStudentRollNo,wardenMessage);
                                 reference.child(id).setValue(helperClass6);
 
                                 Toast.makeText(WrSendMsgActivity.this, "Message Sent Successfully", Toast.LENGTH_SHORT).show();
@@ -90,6 +90,7 @@ public class WrSendMsgActivity extends AppCompatActivity {
                                 wViewMsgIntent.putExtra("w_user_id",wardenUserId);
                                 wViewMsgIntent.putExtra("roll_no",WardenStudentRollNo);
                                 startActivity(wViewMsgIntent);
+                                finish();
 
                             }else{
                                 mRegProgress.hide();

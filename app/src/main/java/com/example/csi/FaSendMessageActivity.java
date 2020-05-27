@@ -78,7 +78,7 @@ public class FaSendMessageActivity extends AppCompatActivity {
 
                             if(faEmail.equals(faEmailFromDb)){
                                 String id = reference.push().getKey();
-                                UserHelperClass2 helperClass5 = new UserHelperClass2(id,faEmail,parentEmailFromDb,FaMessage);
+                                UserHelperClass2 helperClass5 = new UserHelperClass2(id,faEmail,parentEmailFromDb,StudentRollNo,FaMessage);
                                 reference.child(id).setValue(helperClass5);
 
                                 Toast.makeText(FaSendMessageActivity.this, "Message Sent Successfully", Toast.LENGTH_SHORT).show();
@@ -90,6 +90,7 @@ public class FaSendMessageActivity extends AppCompatActivity {
                                 faViewMsgIntent.putExtra("fac_user_id",faUserId);
                                 faViewMsgIntent.putExtra("roll_no",StudentRollNo);
                                 startActivity(faViewMsgIntent);
+                                finish();
 
                             }else{
                                 mRegProgress.hide();

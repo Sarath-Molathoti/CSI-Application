@@ -61,7 +61,7 @@ public class MessageToFaActivity extends AppCompatActivity {
                 String message = mMessageToFa.getText().toString();
                 String id = reference.push().getKey();
 
-                UserHelperClass2 helperClass2 = new UserHelperClass2(id,pFrom,pTo,message);
+                UserHelperClass2 helperClass2 = new UserHelperClass2(id,pFrom,pTo,pRollNo,message);
                 reference.child(id).setValue(helperClass2);
 
                 mRegProgress.dismiss();
@@ -76,6 +76,7 @@ public class MessageToFaActivity extends AppCompatActivity {
                 showFromFa_intent.putExtra("Warden_email",pWardenEmail);
                 showFromFa_intent.putExtra("roll_no",pRollNo);
                 startActivity(showFromFa_intent);
+                finish();
 
 
 

@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,7 +51,7 @@ public class ShowMsgsFromFaActivity extends AppCompatActivity {
                     Information info = snapshot.getValue(Information.class);
                     String check = info.getFrom();
                     String check2 = info.getTo();
-                    String txt = "From : " + info.getFrom() + "\n" + "To : " + info.getTo() + "\n" + "Message : " + info.getMessage();
+                    String txt = "From : " + info.getFrom() + "\n" + "To : " + info.getTo() + "\n" + "Student Roll No : " + info.getStudent_roll_no() + "\n" + "Message : " + info.getMessage();
                     if((check.equals(from) && check2.equals(qto)) || (check.equals(qto) && check2.equals(from))){
                         list.add(txt);
                    }
@@ -68,4 +71,6 @@ public class ShowMsgsFromFaActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,6 +24,8 @@ public class ParentLoginActivity extends AppCompatActivity {
     private EditText mEnteredRollNo;
     private EditText mEnteredPassword;
     private Button mLoginBtn;
+    private Button mCreateAccount;
+    private Button mForgotPassword;
 
     private ProgressDialog mRegProgress;
 
@@ -36,6 +39,24 @@ public class ParentLoginActivity extends AppCompatActivity {
         mEnteredRollNo = (EditText) findViewById(R.id.plogin_roll_no);
         mEnteredPassword = (EditText) findViewById(R.id.plogin_password);
         mLoginBtn = (Button) findViewById(R.id.login_btn);
+        mCreateAccount = (Button) findViewById(R.id.create_acc);
+        mForgotPassword = (Button) findViewById(R.id.forgot);
+
+        mForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgot_intent = new Intent(ParentLoginActivity.this,ForgotPasswordActivity.class);
+                startActivity(forgot_intent);
+            }
+        });
+
+        mCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent create_intent = new Intent(ParentLoginActivity.this,ParentRegistrationActivity.class);
+                startActivity(create_intent);
+            }
+        });
 
         mRegProgress = new ProgressDialog(this);
 

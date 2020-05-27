@@ -2,12 +2,16 @@ package com.example.csi;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,6 +33,8 @@ public class MessageFromWardenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_from_warden);
+
+
 
         listview2 = (ListView) findViewById(R.id.listView2);
 
@@ -54,7 +60,7 @@ public class MessageFromWardenActivity extends AppCompatActivity {
                     Information info2 = snapshot.getValue(Information.class);
                     String check1 = info2.getFrom();
                     String check2 = info2.getTo();
-                    String txt = "From : " + info2.getFrom() + "\n" + "To : " + info2.getTo() + "\n" + "Message : " + info2.getMessage();
+                    String txt = "From : " + info2.getFrom() + "\n" + "To : " + info2.getTo() + "\n" + "Student Roll No : " + info2.getStudent_roll_no() + "\n"+ "Message : " + info2.getMessage();
                     if((check1.equals(bFrom) && check2.equals(bWardenEmail)) || (check1.equals(bWardenEmail) && check2.equals(bFrom))){
                         list2.add(txt);
                    }
@@ -74,4 +80,5 @@ public class MessageFromWardenActivity extends AppCompatActivity {
             }
         });
     }
+
 }

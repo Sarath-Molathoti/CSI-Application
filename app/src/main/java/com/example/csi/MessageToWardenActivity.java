@@ -65,7 +65,7 @@ public class MessageToWardenActivity extends AppCompatActivity {
                 String message = mMessageToWarden.getText().toString();
                 String id = reference3.push().getKey();
 
-                UserHelperClass3 helperClass3 = new UserHelperClass3(aFrom,aTo,message,id);
+                UserHelperClass2 helperClass3 = new UserHelperClass2(id,aFrom,aTo,aRollNo,message);
                 reference3.child(id).setValue(helperClass3);
                 mRegProgress.dismiss();
 
@@ -79,6 +79,7 @@ public class MessageToWardenActivity extends AppCompatActivity {
                 showFromW_intent.putExtra("warden_email",aTo);
                 showFromW_intent.putExtra("roll_no",aRollNo);
                 startActivity(showFromW_intent);
+                finish();
 
 
 

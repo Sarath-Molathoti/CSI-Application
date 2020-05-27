@@ -7,11 +7,14 @@
     android:orientation="vertical"
     android:background="#FFC300"
     tools:context=".ParentSelectActivity">
+
+    <include
+        layout="@layout/appbar"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dashboard"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:layout_gravity="center"
         android:textStyle="bold"
         android:textColor="#FF0000"
@@ -49,7 +52,7 @@
                 android:background="@drawable/custom_button3"
                 android:paddingTop="26dp"
                 android:paddingBottom="0dp"
-                android:text="Messages From Warden"
+                android:text="Messages From/To Warden"
                 android:textColor="#FFFFFF"
                 android:textSize="25dp"
                 android:textStyle="bold" />
@@ -80,7 +83,7 @@
                 android:layout_width="165dp"
                 android:layout_height="165dp"
                 android:layout_gravity="center"
-                android:text="Messages From FA"
+                android:text="Messages From/To FA"
                 android:layout_marginLeft="10dp"
                 android:paddingBottom="15dp"
                 android:paddingTop="15dp"
