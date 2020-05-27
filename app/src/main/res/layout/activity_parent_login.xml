@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ParentLoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_gravity="center"
         android:textColor="#0000FF"
         android:textStyle="bold"
@@ -54,10 +55,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
+        android:textSize="14dp"
         android:textStyle="bold"
         android:textColor="#111"
-        android:background="#FFFFFF"
+        android:background="?android:attr/selectableItemBackground"
         android:id="@+id/forgot"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
@@ -71,17 +72,17 @@
             android:layout_height="wrap_content"
             android:text="Don't have account?"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="9dp"
             android:textSize="18dp"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="14dp"
             android:textStyle="bold"
             android:textColor="#111"
-            android:background="#FFFFFF"
+            android:background="?android:attr/selectableItemBackground"
             android:id="@+id/create_acc"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="9dp"
             android:text=" Create Account"/>
     </LinearLayout>
 
